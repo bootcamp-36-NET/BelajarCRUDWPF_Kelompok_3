@@ -103,8 +103,12 @@ namespace CRUDWPF
                     usc = new UserControlHome();
                     GridMain.Children.Add(usc);
                     break;
+                case "Item":
+                    usc = new UserControlItem();
+                    GridMain.Children.Add(usc);
+                    break;
                 case "Supplier":
-                    usc = new UserControlCreate();
+                    usc = new UserControlSupplier();
                     GridMain.Children.Add(usc);
                     break;
                 case "Transaction":

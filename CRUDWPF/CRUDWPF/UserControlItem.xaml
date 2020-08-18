@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="CRUDWPF.UserControlItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CRUDWPF"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid Margin="0,2,-253,-2" HorizontalAlignment="Left" Width="1053" Background="White">
+            <Label Content="Item" HorizontalAlignment="Left" Margin="84,4,0,0" VerticalAlignment="Top" FontSize="48"/>
+            <DataGrid x:Name="dg_Supplier" HorizontalAlignment="Left" Height="339" Margin="72,76,0,0" VerticalAlignment="Top" Width="440" SelectionChanged="Dg_Supplier_SelectionChanged" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+                    <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" />
+                    <DataGridTextColumn Header="Supplier Id" Binding="{Binding SupplierId}" />
+                    <DataGridTemplateColumn Header="Action">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="DeleteBtn_Click" Click="DeleteBtn_Click">
+                                    <materialDesign:PackIcon Foreground="#FFFFFAFC" Kind="Trash" Width="25" Height="25"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="lblID" Content="ID" HorizontalAlignment="Left" Margin="517,126,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="26" Margin="590,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
+            <Label x:Name="lblName" Content="Nama" HorizontalAlignment="Left" Margin="517,176,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="590,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" />
+            <Label x:Name="lblStatusName" Content="" HorizontalAlignment="Left" Margin="839,352,0,0" VerticalAlignment="Top" Width="204" Background="#00000000" Foreground="#DDFF0000"/>
+            <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="517,226,0,0" VerticalAlignment="Top" Width="52"/>
+            <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="26" Margin="590,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+            <Label x:Name="lblStock" Content="Stock" HorizontalAlignment="Left" Margin="517,272,0,0" VerticalAlignment="Top" Width="52"/>
+            <TextBox x:Name="txtStock" HorizontalAlignment="Left" Height="26" Margin="590,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+            <Label x:Name="lblSupplier" Content="Supplier" HorizontalAlignment="Left" Margin="517,323,0,0" VerticalAlignment="Top" Width="52"/>
+            <ComboBox x:Name="Combo_item" HorizontalAlignment="Left" Margin="590,319,0,0" VerticalAlignment="Top" Width="204" DataContextChanged="Combo_item_DataContextChanged" SelectionChanged="Combo_item_SelectionChanged_1"/>
+            <Button x:Name="BtnInsert" Content="Insert" HorizontalAlignment="Left" Margin="859,275,0,0" VerticalAlignment="Top" Width="113" Click="BtnInsert_Click" Background="#FF116FA4"/>
+            <Button x:Name="BtnUpdate" Content="Update" HorizontalAlignment="Left" Margin="859,222,0,0" VerticalAlignment="Top" Width="113" Click="BtnUpdate_Click" Background="#FF116FA4"/>
+            <Button x:Name="BtnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="859,172,0,0" VerticalAlignment="Top" Width="113" Click="BtnRefresh_Click" Background="#FF116FA4"/>
+            <Label x:Name="lblSearch" Content="Search" HorizontalAlignment="Left" Margin="571,92,0,0" VerticalAlignment="Top" Width="52"/>
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="26" Margin="648,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181"/>
+            <Button x:Name="BtnSearch" Content="Search" HorizontalAlignment="Left" Margin="859,88,0,0" VerticalAlignment="Top" Width="113" Click="BtnSearch_Click_1" Background="#FF116FA4"/>
+        </Grid>
+    </Grid>
+</UserControl>

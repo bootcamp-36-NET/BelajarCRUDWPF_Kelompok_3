@@ -7,13 +7,13 @@ namespace CRUDWPF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class updatemodels : IMigrationMetadata
+    public sealed partial class UpdateModelItem : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatemodels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateModelItem));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008161642450_updatemodels"; }
+            get { return "202008180438510_UpdateModelItem"; }
         }
         
         string IMigrationMetadata.Source

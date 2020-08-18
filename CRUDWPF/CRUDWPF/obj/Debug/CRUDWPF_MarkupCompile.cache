@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\program\CRUDWPF\CRUDWPF\obj\Debug\
+D:\GitHub\Belajar\BelajarCRUDWPF_Kelompok_3\CRUDWPF\CRUDWPF\obj\Debug\
 CRUDWPF
 none
 false
 DEBUG;TRACE
-F:\program\CRUDWPF\CRUDWPF\App.xaml
-51320040167
+D:\GitHub\Belajar\BelajarCRUDWPF_Kelompok_3\CRUDWPF\CRUDWPF\App.xaml
+7156652615
 
-20-653247344
-18173766459
-MainWindow.xaml;UserControlCreate.xaml;UserControlHome.xaml;UserControlTransaction.xaml;UserControlTransactionItem.xaml;
+191481252683
+18-1358969922
+MainWindow.xaml;UserControlCreate.xaml;UserControlHome.xaml;UserControlItem.xaml;UserControlSupplier.xaml;UserControlTransaction.xaml;UserControlTransactionItem.xaml;
 
-True
+False
 

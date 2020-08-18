@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="CRUDWPF.UserControlSupplier"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CRUDWPF"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid Margin="0,2,-253,-2" HorizontalAlignment="Left" Width="1053" Background="White">
+
+            <Label Content="Supplier" HorizontalAlignment="Left" Margin="122,18,0,0" VerticalAlignment="Top" FontSize="48"/>
+            <Label x:Name="Id" Content="ID" HorizontalAlignment="Left" Margin="517,187,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="nama" Content="Nama" HorizontalAlignment="Left" Margin="517,225,0,0" VerticalAlignment="Top" />
+            <Button x:Name="BtnInsert" Content="Insert" HorizontalAlignment="Left" Margin="867,303,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click" Background="#FF116FA4"/>
+            <DataGrid x:Name="dg_Supplier" HorizontalAlignment="Left" Height="336" Margin="48,90,0,0" VerticalAlignment="Top" Width="366" SelectionChanged="Dg_Supplier_SelectionChanged" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+                            Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Nama"
+                            Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Join Date"
+                            Binding="{Binding JoinDate, StringFormat='dd/MM/yyyy'}"/>
+                    <DataGridTemplateColumn Header="Action">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnDelete" Click="BtnDelete_Click">
+                                    <materialDesign:PackIcon Foreground="#FFFFFAFC" Kind="Trash" Width="25" Height="25"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="JoinDate" Content="Join Date" HorizontalAlignment="Left" Margin="517,264,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_ID" HorizontalAlignment="Left" Height="23" Margin="630,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" PreviewTextInput="Txt_ID_PreviewTextInput" IsEnabled="False" TextChanged="Txt_ID_TextChanged"/>
+            <TextBox x:Name="txt_Nama" HorizontalAlignment="Left" Height="23" Margin="629,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" PreviewTextInput="Txt_Nama_PreviewTextInput_1" TextChanged="Txt_Nama_TextChanged"/>
+            <Button x:Name="BtnUpdate" Content="Update" HorizontalAlignment="Left" Margin="867,249,0,0" VerticalAlignment="Top" Width="113" Click="UpdateBtn_Click" Background="#FF116FA4"/>
+            <Label x:Name="lblSearch" Content="Search" HorizontalAlignment="Left" Margin="560,110,0,0" VerticalAlignment="Top" Width="52"/>
+            <TextBox x:Name="Txt_Search" HorizontalAlignment="Left" Height="32" Margin="630,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" PreviewTextInput="Txt_Search_PreviewTextInput" TextChanged="Txt_Search_TextChanged_1"/>
+            <Button x:Name="BtnSearch" Content="Search" HorizontalAlignment="Left" Margin="853,110,0,0" VerticalAlignment="Top" Width="112" Background="#FF116FA4" Click="BtnSearch_Click" RenderTransformOrigin="0.96,0.906"/>
+            <DatePicker Height="25" HorizontalAlignment="Left" Margin="630,270,0,0" Name="DatePicker1" VerticalAlignment="Top" Width="124" SelectedDateChanged="DatePicker1_SelectedDateChanged"/>
+            <Button x:Name="BtnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="867,190,0,0" VerticalAlignment="Top" Width="113" Click="BtnRefresh_Click" Background="#FF116FA4"/>
+        </Grid>
+    </Grid>
+</UserControl>

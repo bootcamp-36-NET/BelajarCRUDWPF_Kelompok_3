@@ -11,18 +11,20 @@ namespace CRUDWPF.Models
     [Table("TB_M_Supplier")]
     class Supplier
     {
+        public Supplier(string text)
+        {
+
+        }
+
+
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime JoinDate { get; set; }
 
         public Supplier()
         {
-
         }
-
-        public Supplier(string name)
-        {
-            this.Name = name;
-        }
+    
     }
 }

@@ -71,13 +71,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Migrations\202008141649234_addmodels.cs" />
-    <Compile Include="Migrations\202008141649234_addmodels.designer.cs">
-      <DependentUpon>202008141649234_addmodels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008161642450_updatemodels.cs" />
-    <Compile Include="Migrations\202008161642450_updatemodels.designer.cs">
-      <DependentUpon>202008161642450_updatemodels.cs</DependentUpon>
+    <Compile Include="Migrations\202008180438510_UpdateModelItem.cs" />
+    <Compile Include="Migrations\202008180438510_UpdateModelItem.designer.cs">
+      <DependentUpon>202008180438510_UpdateModelItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserControlCreate.xaml.cs">
@@ -85,6 +81,12 @@
     </Compile>
     <Compile Include="UserControlHome.xaml.cs">
       <DependentUpon>UserControlHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlItem.xaml.cs">
+      <DependentUpon>UserControlItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSupplier.xaml.cs">
+      <DependentUpon>UserControlSupplier.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlTransaction.xaml.cs">
       <DependentUpon>UserControlTransaction.xaml</DependentUpon>
@@ -113,6 +115,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControlSupplier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControlTransaction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,11 +150,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202008141649234_addmodels.resx">
-      <DependentUpon>202008141649234_addmodels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008161642450_updatemodels.resx">
-      <DependentUpon>202008161642450_updatemodels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008180438510_UpdateModelItem.resx">
+      <DependentUpon>202008180438510_UpdateModelItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
