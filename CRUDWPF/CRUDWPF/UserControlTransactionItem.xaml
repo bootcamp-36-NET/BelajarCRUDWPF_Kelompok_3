@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="CRUDWPF.UserControlTransactionItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CRUDWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid>
+        <Grid Margin="0,2,-253,-2" HorizontalAlignment="Left" Width="1053" Background="White">
+            <Label Content="Transaction Item" HorizontalAlignment="Left" Margin="394,70,0,0" VerticalAlignment="Top" FontSize="48"/>
+            <Label Content="ID" HorizontalAlignment="Left" Margin="517,242,0,0" VerticalAlignment="Top"/>
+            <Button Content="Insert" HorizontalAlignment="Left" Margin="719,425,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Background="#FF116FA4"/>
+            <DataGrid x:Name="dg_Supplier" HorizontalAlignment="Left" Height="248" Margin="132,185,0,0" VerticalAlignment="Top" Width="349" SelectionChanged="Dg_Supplier_SelectionChanged" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id"
+                            Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Quantity"
+                            Binding="{Binding Quantity}"/>
+                    <DataGridTextColumn Header="Transaction ID"
+                            Binding="{Binding TransactionId}"/>
+                    <DataGridTextColumn Header="Item ID"
+                            Binding="{Binding ItemId}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button  Click="DeleteBtn_Click">Delete</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBox x:Name="txt_ID" HorizontalAlignment="Left" Height="23" Margin="517,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" PreviewTextInput="Txt_Name_PreviewTextInput" IsEnabled="False"/>
+            <Button x:Name="UpdateBtn" Content="Edit" HorizontalAlignment="Left" Margin="840,425,0,0" VerticalAlignment="Top" Width="75" Click="UpdateBtn_Click" Background="#FF116FA4"/>
+            <TextBox x:Name="Txt_Search" HorizontalAlignment="Left" Height="23" Margin="517,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" PreviewTextInput="Txt_Search_PreviewTextInput" TextChanged="Txt_Search_TextChanged_1"/>
+            <Button Content="Search" HorizontalAlignment="Left" Margin="764,186,0,0" VerticalAlignment="Top" Width="75" Background="#FF116FA4" Click="Button_Click"/>
+            <TextBox x:Name="Txt_Qty" HorizontalAlignment="Left" Height="23" Margin="521,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" PreviewTextInput="Txt_Qty_PreviewTextInput"/>
+            <ComboBox x:Name="Combo_Transaction" HorizontalAlignment="Left" Margin="521,429,0,0" VerticalAlignment="Top" Width="120" DataContextChanged="Combo_Transaction_DataContextChanged"/>
+            <ComboBox x:Name="Combo_Item" HorizontalAlignment="Left" Margin="719,350,0,0" VerticalAlignment="Top" Width="120" DataContextChanged="Combo_Item_DataContextChanged"/>
+            <Label Content="Quantity" HorizontalAlignment="Left" Margin="517,321,0,0" VerticalAlignment="Top"/>
+            <Label Content="Transaction ID" HorizontalAlignment="Left" Margin="521,399,0,0" VerticalAlignment="Top"/>
+            <Label Content="Item ID" HorizontalAlignment="Left" Margin="719,320,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn_refresh" Content="Refresh" HorizontalAlignment="Left" Margin="883,185,0,0" VerticalAlignment="Top" Width="75" Background="#FF116FA4" Click="Btn_refresh_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>
