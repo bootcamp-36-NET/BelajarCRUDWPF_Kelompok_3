@@ -79,6 +79,12 @@
                             <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10" Foreground="#FFD8E6F5"/>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem x:Name="Item" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10" Foreground="#FFA4C6E9"/>
+                            <TextBlock Text="Item" VerticalAlignment="Center" Margin="20 10" Foreground="#FFD8E6F5"/>
+                        </StackPanel>
+                    </ListViewItem>
                     <ListViewItem x:Name="Supplier" Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="10" Foreground="#FFA4C6E9"/>
