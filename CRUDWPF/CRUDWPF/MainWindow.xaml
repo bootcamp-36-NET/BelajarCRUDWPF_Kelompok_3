@@ -40,19 +40,14 @@
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
-            <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="Bootcamp 36" VerticalAlignment="Center" FontSize="16"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                     <StackPanel Width="150">
-                        <Button Content="Settings"/>
-                        <Button Content="Account"/>
-                        <Button Content="Help"/>
-                        <Separator/>
-                        <Button Content="Logout"/>
+                        <Button Content="Logout" Click="Button_Click_1"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
-            </StackPanel>-->
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFFFFF">Belajar CRUD WPF</TextBlock>
+                </StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Foreground="#FFFFFF">Belajar CRUD WPF</TextBlock>
         </Grid>
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E" Margin="0,0,0,0.333">
             <Grid.Effect>

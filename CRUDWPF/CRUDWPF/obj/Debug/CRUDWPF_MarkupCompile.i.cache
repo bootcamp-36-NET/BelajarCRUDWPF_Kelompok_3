@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Enrico\source\repos\CRUDWPF\CRUDWPF\obj\Debug\
+F:\program\CRUDWPF\CRUDWPF\obj\Debug\
 CRUDWPF
 none
 false
 DEBUG;TRACE
-C:\Users\Enrico\source\repos\CRUDWPF\CRUDWPF\App.xaml
-51320040167
+F:\program\CRUDWPF\CRUDWPF\App.xaml
+9-1533931509
 
-20-653247344
-18-1366152249
-MainWindow.xaml;UserControlCreate.xaml;UserControlHome.xaml;UserControlTransaction.xaml;UserControlTransactionItem.xaml;
+26-375709391
+191431857657
+ChangePassWindow.xaml;ForgotPassWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegisterWindow.xaml;UserControlCreate.xaml;UserControlHome.xaml;UserControlTransaction.xaml;UserControlTransactionItem.xaml;
 
-False
+True
 

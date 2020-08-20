@@ -119,5 +119,13 @@ namespace CRUDWPF
                     break;
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            LoginWindow login = new LoginWindow();
+            login.Show();
+            this.Close();
+
+        }
     }
 }
